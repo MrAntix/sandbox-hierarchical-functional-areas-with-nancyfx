@@ -1,0 +1,20 @@
+﻿@using Sandbox.HierarchicalFunctionalAreasWithNancyFX.Home.Products
+
+<div class="row">
+    @foreach (var product in ProductModel.Index)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="~/products/@(product.Category)/_images/@(product.Code).jpg" alt="@product.Name" />
+                <div class="caption">
+                    <h3>@product.Name</h3>
+                    <p>@product.Description</p>
+                    <p>
+                        <code>@product.Price.ToString("C")</code>
+                        <a href="#" class="btn btn-primary pull-right" role="button">Buy</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

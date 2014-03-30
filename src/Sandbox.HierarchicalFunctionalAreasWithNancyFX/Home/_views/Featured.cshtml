@@ -1,0 +1,30 @@
+﻿@using System.Linq
+@using Sandbox.HierarchicalFunctionalAreasWithNancyFX.Home.Products
+<div id="featured-products" class="carousel" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+        @for (var index = 0; index < ProductModel.Index.Length; index++)
+        {
+            <li class="@(index == 0 ? "active" : null)" data-slide-to="@index" data-target="featured-products"></li>
+        }
+    </ol>
+
+    <div class="carousel-inner">
+        @foreach (var product in ProductModel.Index)
+        {
+            <div class="item @(product == ProductModel.Index.First() ? "active" : null)">
+                <img class="center-block" src="~/products/@(product.Category)/_images/@(product.Code).jpg" alt="@product.Name">
+                <div class="carousel-caption">
+                   <h4>@product.Name</h4>
+                </div>
+            </div>
+        }
+    </div>
+
+    <a class="left carousel-control" href="#featured-products" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#featured-products" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>
