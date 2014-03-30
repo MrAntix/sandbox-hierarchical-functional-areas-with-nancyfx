@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="~/favicon.ico">
 
-    <title>@ViewBag.Title - HFA</title>
+    <title>@ViewBag.Title - Hierarchical Functional Areas with NancyFX</title>
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet">
     <link href="../Content/Site.min.css" rel="stylesheet" />
@@ -29,9 +29,16 @@
                 <a class="navbar-brand" href="/">HFA</a>
             </div>
             <div class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Search...">
-                </form>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown"><a href="~/products/" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="~/products">All Products</a></li>    
+                            <li class="divider"></li>    
+                            <li><a href="~/products/mens">Mens</a></li>    
+                            <li><a href="~/products/womens">Womens</a></li>    
+                        </ul>
+                    </li>    
+                </ul>
             </div>
         </div>
         <div class="container">

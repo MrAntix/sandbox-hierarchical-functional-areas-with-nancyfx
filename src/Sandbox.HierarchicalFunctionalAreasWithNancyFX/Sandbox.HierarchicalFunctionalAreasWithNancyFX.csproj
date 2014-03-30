@@ -159,7 +159,7 @@
     <Compile Include="Home\Products\ProductsModule.cs" />
     <Compile Include="Home\Products\Womens\WomensProductModel.cs" />
     <Compile Include="Home\Products\Womens\WomensProductsModule.cs" />
-    <None Include="Home\_views\Index.cshtml" />
+    <Content Include="Home\_views\Index.cshtml" />
     <Compile Include="Nancy\FunctionalAreaLocations.cs" />
     <Compile Include="Nancy\FunctionalAreaModule.cs" />
     <Compile Include="Nancy\SiteBootstrapper.cs" />
